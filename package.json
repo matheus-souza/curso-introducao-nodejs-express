@@ -4,6 +4,9 @@
   "main": "app.js",
   "author": "Matheus H. de Souza <mh.matheussouza@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
