@@ -2,8 +2,9 @@ var clienteModel = require('../models/ClienteModel')();
 
 module.exports = (app) => {
     app.get('/', (req, res) => {
-        var listaClientes = clienteModel.all();
-        res.render('site/home', {clientes: listaClientes});
+        clienteModel.all((err, result) => {
+            res.render('site/home', {clientes: result});
+        });
     });
 
     app.get('/contato', (req, res) => {
