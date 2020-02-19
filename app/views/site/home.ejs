@@ -14,9 +14,18 @@
             <% } %>
         </ul>
         <br/>
+
+        <%  if (errors) { %>
+        <ul>
+            <% for (var key = 0 in errors) { %>
+            <li><%= errors[key].msg %></li>
+            <% } %>
+        </ul>
+        <% } %>
+
         <form action="/" method="post">
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="text" name="email" placeholder="E-mail">
+            <input type="text" name="nome" placeholder="Nome" value="<%= data.nome %>">
+            <input type="text" name="email" placeholder="E-mail"  value="<%= data.email %>">
             <button>Adicionar</button>
         </form>
     </body>
