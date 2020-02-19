@@ -5,6 +5,10 @@ module.exports = (app) => {
         clienteController.index(req, res);
     });
 
+    app.post('/', (req, res) => {
+        clienteController.store(req, res);
+    });
+
     app.get('/cliente/:id', (req, res) => {
         clienteController.show(req, res);
     });
