@@ -1,1 +1,4 @@
-curso-introducao-nodejs-express
+# Projeto prático do curso Introdução ao Node JS + Express
+> Projeto desenvolvido no decorrer do curso [Introdução ao Node JS + Express](https://www.udemy.com/course/introducao-ao-node-js-express/), ministrado por [Guilherme Ferreira](https://www.udemy.com/user/guilherme-ferreira-4/)
+
+Neste projeto do Curso de Introdução ao Node JS, vais encontrar um projeto prático utilizado para desenvolver um sistema web com Node JS. Também encontrará os conceitos iniciais e ainda os passos para construir um sistema web utilizando o framework Express e recursos como Ejs, Nodemon, Body-parser, express-validator e ainda realizar uma conexão com o banco de dados MySQL.
