@@ -1,10 +1,8 @@
-var clienteModel = require('../models/ClienteModel')();
+var clienteController = require('../controllers/ClienteController');
 
 module.exports = (app) => {
     app.get('/', (req, res) => {
-        clienteModel.all((err, result) => {
-            res.render('site/home', {clientes: result});
-        });
+        clienteController.index(req, res);
     });
 
     app.get('/contato', (req, res) => {
