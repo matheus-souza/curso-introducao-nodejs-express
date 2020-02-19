@@ -1,18 +1,1 @@
-var express = require('express');
-var module = require('./module');
-console.log(module());
-
-var app = express();
-app.set('view engine', 'ejs');
-
-app.get('/', (req, res) => {
-    res.render('site/home');
-});
-
-app.get('/contato', (req, res) => {
-    res.render('site/contato');
-});
-
-app.listen(8000, () => {
-    console.log('locahost:8000');
-});
+var app = require('./config/server')();
