@@ -1,4 +1,7 @@
 var express = require('express');
+var module = require('./module');
+console.log(module());
+
 var app = express();
 app.set('view engine', 'ejs');
 
