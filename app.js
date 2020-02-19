@@ -1,24 +1,8 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-var server = http.createServer((req, res) => {
-    var pagina = req.url;
-    console.log(pagina);
-
-    if (pagina == '/contato') {
-        res.end(`
-            <!DOCTYPE html>
-            <html>
-                <head>
-                    <meta charset="utf-8">
-                    <title>Introdução a NodeJS</title>
-                </head>
-                <body>
-                    <h1>Página Contato</h1>
-                </body>
-            </html>
-        `);
-    } else {
-        res.end(`
+app.get('/', (req, res) => {
+    res.send(`
             <!DOCTYPE html>
             <html>
                 <head>
@@ -30,8 +14,23 @@ var server = http.createServer((req, res) => {
                 </body>
             </html>
         `);
-    }
 });
 
-console.log('localhost:8000');
-server.listen(8000);
+app.get('/contato', (req, res) => {
+    res.send(`
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta charset="utf-8">
+                    <title>Introdução a NodeJS</title>
+                </head>
+                <body>
+                    <h1>Página Contato</h1>
+                </body>
+            </html>
+        `);
+});
+
+app.listen(8000, () => {
+    console.log('locahost:8000');
+});
